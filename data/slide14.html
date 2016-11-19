@@ -1,0 +1,110 @@
+<div class="slide-wrapper" index="14">
+					<div class="hr-not-red"></div>
+					<h3>Specificity-14</h3>
+					<ul class="ul">
+						<li style="list-style-type: none;">
+							<table class="slide" style="width: 100%;">
+								<tbody>
+										<tr>
+											<td class="c52" colspan="6" rowspan="1">
+												<p class="c6 c49"><span class="c24 c48"></span></p>
+											</td>
+										</tr>
+										<tr>
+											<td class="c52 c31" colspan="6" rowspan="1">
+												<h1><span class="c68">CSS Browser Styles Specificity:</span></h1>
+												<div></div>
+											</td>
+										</tr>
+										<tr>
+											<td class="c52" colspan="6" rowspan="1">
+												<ul class="ul-slide">
+													<li>
+														<table style="width: 95%;s">
+<tbody>
+<tr>
+<td class="num">(1)</td>
+<td>* { }</td>
+<td>0</td>
+</tr>
+<tr class="pdd">
+<td class="num">(2)</td>
+<td>li { }</td>
+<td>1 (one element)</td>
+</tr>
+<tr>
+<td class="num">(3)</td>
+<td>li:first-line { }</td>
+<td>2 (one element, one pseudo-element)</td>
+</tr>
+<tr class="pdd">
+<td class="num">(4)</td>
+<td>ul li { }</td>
+<td>2 (two elements)</td>
+</tr>
+<tr>
+<td class="num">(5)</td>
+<td>ul ol+li { }</td>
+<td>3 (three elements)</td>
+</tr>
+<tr class="pdd">
+<td class="num">(6)</td>
+<td>h1 + *[rel=up] { }</td>
+<td>11 (one attribute, one element)</td>
+</tr>
+<tr>
+<td class="num">(7)</td>
+<td>ul ol li.red { }</td>
+<td>13 (one class, three elements)</td>
+</tr>
+<tr class="pdd">
+<td class="num">(8)</td>
+<td>li.red.level { }</td>
+<td>21 (two classes, one element)</td>
+</tr>
+<tr>
+<td class="num">(9)</td>
+<td>style=””</td>
+<td>1000 (one inline styling)</td>
+</tr>
+<tr class="pdd">
+<td class="num">(10)</td>
+<td>p { }</td>
+<td>1 (one HTML selector)</td>
+</tr>
+<tr>
+<td class="num">(11)</td>
+<td>div p { }</td>
+<td>2 (two HTML selectors)</td>
+</tr>
+<tr class="pdd">
+<td class="num">(12)</td>
+<td>.sith</td>
+<td>10 (one class selector)</td>
+</tr>
+<tr>
+<td class="num">(13)</td>
+<td>div p.sith { }</td>
+<td>12 (two HTML selectors and a class selector)</td>
+</tr>
+<tr class="pdd">
+<td class="num">(14)</td>
+<td>#sith</td>
+<td>100 (one id selector)</td>
+</tr>
+<tr>
+<td>(15)</td>
+<td>body #darkside .sith p { }</td>
+<td>112 (HTML selector, id selector, class selector, HTML selector; 1+100+10+1)</td>
+</tr>
+</tbody>
+</table>
+													</li>
+												</ul>	
+											</td>
+										</tr>
+								</tbody>
+							</table>
+						</li>
+					</ul>
+				</div>

@@ -1,0 +1,52 @@
+<div class="slide-wrapper" index="32">
+    <!-- <h2 class="firstHeading">CSS Problems:</h2> -->
+    <div class="hr"></div>
+    <h3>Margin collapse problem -32</h3>
+    <ul class="ul">
+        <li style="list-style-type: none;">
+            <table class="slide" style="width: 100%;">
+                <tbody>
+                    <tr>
+                        <td class="c52" colspan="6" rowspan="1">
+                            <p class="c6 c49"><span class="c24 c48"></span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="c52 c31" colspan="6" rowspan="1">
+                            <h1><span class="c68">Margin collapse problem</span></h1>
+                            <div></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="c52" colspan="6" rowspan="1">
+                            <ul class="ul-slide">
+                                <li>
+									Margin collapse happens when upper and lower margins of two butt-to-butt elements collapse into one (the greater one). 
+                                </li>
+								<li>
+									Most often, this is the desired behavior. Margin collapse will take place in 3 most frequent cases:
+                                </li>
+								<li>Neighboring elements:<br/>
+									When two neighboring elements have vertical spacings - they will collapse to the value of the greater margin. 
+									A workaround-1: 
+									<em>clear: left; float: left; <span style="color: green;">/*('right' is also possible)*/</span> display: inline-block;</em>
+									<a href="http://jsfiddle.net/gRK3m/1/light/">jsFiddle</a>
+								</li>
+								<li>
+									Parent element and the first/last child element: <br/>
+									Usually, upper margin of the parent and child elements will collapse to the largest margin of the two. 
+									The same way the lower margins collapse for the last child element. 
+									A workaround-2:  <a href='http://jsfiddle.net/unnpn/3/light/'>jsFiddle</a><br/>
+									<em>overflow: hidden; <span style="color: green;">/*or any other, except for the '<b>visible</b>'*/</span><br/>
+									padding: 1px <span style="color: green;">/*or any other value greater than 0*/</span><br/>
+									border: 1px solid transparent <span style="color: green;">/*или любой другой border*/</span><br/>
+									float: left <span style="color: green;">/*right will also work*/</span><br/>
+								</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </li>
+    </ul>
+</div>

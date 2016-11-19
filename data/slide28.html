@@ -1,0 +1,93 @@
+<div class="slide-wrapper" index="28">
+    <!-- <h2 class="firstHeading">Layout:</h2> -->
+    <div class="hr"></div>
+    <h3>CSS Layout-28</h3>
+    <ul class="ul">
+        <li style="list-style-type: none;">
+            <table class="slide" style="width: 100%;">
+                <tbody>
+                    <tr>
+                        <td class="c52" colspan="6" rowspan="1">
+                            <p class="c6 c49"><span class="c24 c48"></span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="c52 c31" colspan="6" rowspan="1">
+                            <h1><span class="c68">CSS Layout-2</span></h1>
+                            <div></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="c52" colspan="6" rowspan="1">
+                            <ul class="ul-slide">
+                                <li>
+                                    The '<b>Floating</b>': will remove the element from normal document flow:
+                                    <div id="float1"></div>
+                                </li>
+								<li>
+                                    The '<b>Floating</b>': overlapping elements with left-float:
+                                    <div id="float2"></div>
+                                </li>
+								<li>
+                                    The '<b>Floating</b>': wrapping 'inline-box' elements (i.e., text) around the images:
+                                    <div id="float3"></div>
+                                </li>
+								<li>
+                                    The '<b>Floating</b>': lining up elements horizontally:<br/>
+									this technique is often used to transform a list of menus to horizontal layout:
+                                    <div id="float4"></div>
+                                </li>
+								<li>
+                                    The '<b>Floating Clearing</b>' techniques-1: <br/>
+                                    <div id="float5"></div>
+                                </li>
+								<li>
+                                    The '<b>Floating Clearing</b>' techniques-2: <br/>
+                                    <div id="float6"></div>
+									'<b>overflow</b>' creates a new formatting context, this way the element with this 'overflow' style will be isolated
+										from the outer context. This isolation allows clearing the previous context: nexted elements with 'float' can expand their parent.
+										<ul>
+											<li>Pros: </li>
+											<li>- simple code and adequate behavior</li>
+											<li>Cons:</li>
+											<li>- Nested elements with absolute positioning will be cut short or hidden, if they are located outside the bounderies of the element.</li>																				
+										</ul>
+                                </li>
+								<li>
+                                    The '<b>Floating Clearing</b>' techniques-3: <br/>
+                                    <div id="float7"></div>
+									'<b>clearfix</b>' Psuedo-element '<b>:after</b>' is invisible, with zero-height, and is in fact missing in the document stream thanks to its '<b>display: block;</b'> 
+									it will take up the whole of parent's width because of '<b>clear: both;</b>' and the 'clear : both;' will clear out the document stream.
+										<ul>
+											<li>Pros: </li>
+											<li>- no need to create a separate block element with the style of '<b>clear: both;</b>'</li>
+											<li>- nested absolute-positioned elements will not be cut short</li>
+											<li>Cons:</li>
+											<li>- The element still remains in the overall document stream: its nested elements' paddings and margins will cave in under the element into the 'float', if such a nested element exists.</li>
+										</ul>
+                                </li>
+								<li>
+                                    The '<b>Floating Clearing</b>' techniques-4: <br/>
+                                    <div id="float8"></div>
+									'<b>display:table</b>' just like 'overflow: hidden;' creates its own formatting context, but does not cut short the absolute-positioned elements that go over its bounds.
+										<ul>
+											<li>Pros: </li>
+											<li>- does not cut short the elements</li>
+											<li>- better behavior than that of 'clearfix'</li>
+											<li>Cons:</li>
+											<li>- elemtn will cut short its width by context to show behavior of a table</li>
+											<li>- to resolve the last drawback:</li>
+										</ul>
+										<div id="float9"></div>
+										Because of the 2 dots in '<b>:after</b>' and the  10px white-space between them, browser will always 
+										display this element at the size of the table, and not the overall size of the screen.
+										The fact this element hight is zero, will hide the dots.
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </li>
+    </ul>
+</div>

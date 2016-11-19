@@ -1,0 +1,52 @@
+<div class="slide-wrapper" index="34">
+    <!-- <h2 class="firstHeading">CSS Problems:</h2> -->
+    <div class="hr"></div>
+    <h3>Display: inline-block Problem -34</h3>
+    <ul class="ul">
+        <li style="list-style-type: none;">
+            <table class="slide" style="width: 100%;">
+                <tbody>
+                    <tr>
+                        <td class="c52" colspan="6" rowspan="1">
+                            <p class="c6 c49"><span class="c24 c48"></span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="c52 c31" colspan="6" rowspan="1">
+                            <h1><span class="c68">Display: inline-block Problem</span></h1>
+                            <div></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="c52" colspan="6" rowspan="1">
+                            <ul class="ul-slide">
+                                <li>More front-end devs prefer '<b>display: inline-block;</b>' instead of '<b>float</b>'</li>
+								<li>The major benefit of '<b>display: inline-block;</b>' is no need to clear the '<b>float</b>'</li>
+								<li>'<b>display: inline-block;</b>' gives hybrid of an inline and a block element</li>
+								<li>Such elements will have own paddings, margins, and their width will depend on the content size, by default, and does not take up the whole of the width of the parent's element. This way, the blocks will be located horizontally, and not vertically</li>
+								<li>The problem is that such elements are half-inline, which means they will be positioned at a white-space in-between each other</li>
+								<li>With a standard font size of 16px, the white-space will make 4px. In the majority of cases, the size of the white-space will be at 25% from the font-size.</li>
+								<li>E.g., a container with the width of 600px with three elements inside, whose width is at 200px and styled as '<b>display: inline-block;</b>'. 
+									Unless the white-space inbetween be remmoved, we will not be able to position them in one line: <b>(200 *3 + 4 * 2 = 608)</b>.</li>
+								<li><div id="cssProblemsInlineBlock1"></div></li>
+                            </ul>
+								Solutions: 
+							<ul class="ul-slide">
+								<li>Markup: removal of the white-space: <div id="cssProblemsInlineBlock2"></div></li>
+								<li>CSS: distance the symbols away: with '<b>letter-spacing: -0.3em;</b> for the parent and resetting letter-spacing for the children:
+									<div id="cssProblemsInlineBlock3"></div>
+								</li>
+								<li>CSS: negative margin '<b>margin-left: -0.25em;</b> for the parent and resetting margin-left for the children as '<b>margin-left: 0;</b>':
+									<div id="cssProblemsInlineBlock4"></div>
+								</li>
+								<li>CSS: font-size '<b>font-size: 0;</b> for the parent and resetting for the children as '<b>font-size: 16px;</b>':
+									<div id="cssProblemsInlineBlock5"></div>
+								</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </li>
+    </ul>
+</div>

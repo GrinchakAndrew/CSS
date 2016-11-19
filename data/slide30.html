@@ -1,0 +1,80 @@
+<div class="slide-wrapper" index="30">
+    <h2 class="firstHeading">Alignments:</h2>
+    <div class="hr"></div>
+    <h3>CSS Centering-30</h3>
+    <ul class="ul">
+        <li style="list-style-type: none;">
+            <table class="slide" style="width: 100%;">
+                <tbody>
+                    <tr>
+                        <td class="c52" colspan="6" rowspan="1">
+                            <p class="c6 c49"><span class="c24 c48"></span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="c52 c31" colspan="6" rowspan="1">
+                            <h1><span class="c68">CSS Centering</span></h1>
+                            <div></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="c52" colspan="6" rowspan="1">
+                            <ul class="ul-slide">
+                                <li>
+									(1) Parent is styled with '<b>text-align: center;</b>' 
+										Child block should be styled as '<b>display: inline-block;</b>'
+                                </li>
+								<li>
+									(2) Parent is assigned own width above zero, e.g. '<b>width: 1000px;</b>' 
+										Make sure the child block does not take up all the width by default, i.e., its width is less than that of the parent. 
+										The child is assigned with style: '<b>margin: 0 auto;</b>'
+                                </li>
+								<li>
+									(3) Assign the internal child block-element '<b>position : absolute;</b>' and style '<b>left : 50%;</b>'
+										However, for the whole width of the block its margin should be set to <em><b>minus half of its width</b></em>.
+                                </li>
+								<li>
+									(4) Vertical center-alignment is possible, when an element has '<b>position: absolute;</b>' styling
+									and <b>top : 50%;</b>, however, its parent should be styled with '<b>position : relative;</b>', 
+									because absolute positioning will aling block relative to its first parent with relative positioning,
+									or if such a block is not found, than by the first parent block to be found, e.g., <b>html</b>.
+									But, if I know the height of the block, I can set it margin-top at negative half-value of its height.
+									This will make the block evenly vertically-aligned.
+                                </li>
+								<li>
+									(5) If we do not know the height and width 
+									of the block, which we want to have center-aligned:
+									we shoudl set it the style '<b>position: absolute;</b>' and 
+									'<b>top : 50%;</b>' and '<b>left: 50%;</b>'; 
+									then its parent should be styled with 
+									'<b>position: relative;</b>', and afterwards, the child should have the style set: 
+									'<b>transform(translate(-50%, -50%));</b>'.
+                                </li>
+								<li>
+									(6) Line-height: style will align the block by its baseline. 
+									   the block should be styled with own height and style '<b>display: inline;</b>' 
+									   or '<b>display: inline-block;</b>'.
+									   The block itself will make alignment by its baseline of its parent is assigned <b>line-height</b> property.
+                                </li>
+								<li>
+									(7) Use of the 'table-cell' alingment: parent should be assigned with '<b>display: table;</b>' 
+									  child should be styled with '<b>display: cell;</b>' and '<b>vertical-align: middle;</b>'.
+                                </li>
+								<li>
+									(8) Parent should be styled with '<b>position: relative;</b>' 
+										Its child should be styled with '<b>position: absolute;</b>' and 
+										'<b>display: block;</b>' and 
+										'<b>margin: 0 auto;</b>' and
+										'<b>left: 0;</b>' and
+										'<b>top: 0;</b>' and
+										'<b>right: 0;</b>' and
+										'<b>bottom: 0;</b>'.
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </li>
+    </ul>
+</div>

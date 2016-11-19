@@ -1,0 +1,76 @@
+<div class="slide-wrapper" index="31">
+    <h2 class="firstHeading">CSS Problems:</h2>
+    <div class="hr"></div>
+    <h3>Width / Height of 100% -31</h3>
+    <ul class="ul">
+        <li style="list-style-type: none;">
+            <table class="slide" style="width: 100%;">
+                <tbody>
+                    <tr>
+                        <td class="c52" colspan="6" rowspan="1">
+                            <p class="c6 c49"><span class="c24 c48"></span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="c52 c31" colspan="6" rowspan="1">
+                            <h1><span class="c68">Width / Height of 100%</span></h1>
+                            <div></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="c52" colspan="6" rowspan="1">
+                            <ul class="ul-slide">
+                                <li>
+									Can I use width = 100% to make my page take up all of the height of the screen?
+                                </li>
+								<li>
+									Actually, no: '<b>height: 100%;</b>' 
+									is equal to the height of the parent element. 
+									Height of 100% does not stand for the 'height of the whole window':) 
+                                </li>
+								<li>
+									Why is that? The parent of your container is the '<b>body</b>', 
+									and its height is set to '<b>auto</b>' by default; 
+									This means, its height is equal to that of the content. 
+									Of course, you can add '<b>height: 100%;</b>' to the '<b>body</b>', however, this is not enough either. 
+								</li>
+								<li>
+									Why is that? Because the parent of the '<b>body</b>' is the element '<b>html</b>', 
+									whose '<b>height</b>' property is set to '<b>auto</b>' 
+									and it will also expand to take up the whole width of the content. 
+									And now, if you will add '<b>height: 100%;</b>' to the '<b>html</b>' element also, everything will work out.
+								</li>
+								<li>
+									The root element to the '<b>html</b>' is the '<b>viewport</b>'. 
+									Viewport is the browser window. So, if you set '<b>height: 100%;</b>' to '<b>html</b>', 
+									it is just the same as saying: get the browser 100% height:<br/>
+										<em>html, body, .container {height: 100%;}</em><br/>
+								</li>
+								<li>What if the parent element has property '<b>min-height</b>', and not the '<b>height</b>'?</li>
+								<li>
+									Workaround example in code <a href="http://jsfiddle.net/aUDnn/1/light/">JSFiddle</a>:
+									<em>.parent { min-height: 300px; height: 1px; <span style="color: green;">/* Required to make the child 100% of the min-height */</span> }</em>
+									<em>.child { height: 100%;}</em>
+								</li>
+								<li>By the styling rule '<b>width: 100%;</b>', we want our element to take up the whole of the width of the parent's.</li>
+								<li>The '<b>width</b>' property is NOT the absolute dimensions of the element, rather the size of its inner content, which is a big difference. </li>
+								<li>If you add '<b>padding</b>' and/or '<b>border</b>' to the element with '<b>width: 100%;</b>', 
+								it will no longer fit the parent: <a href="http://jsfiddle.net/Cy8hW/light/">JSFiddle</a></li>
+								<li>There are several possible workarounds. The first and the best one is avoiding the property '<b>width: 100%;</b>', as in this case it's useless.
+									If the sibling element is a block-element, it will take up the whole of its parent's width automatically(no problem with paddings or borders). 
+									But if we are working with 'inline-block' element, we are up against another problem.</li>
+								<li>As alternative, you can use the '<b>calc()</b>' property to calculate width: '<b>width: calc(100% — 3em);</b>'. 
+									However, it will not work either. First off, we will need to calculate the 'padding' + 'border'. 
+										Secondly, calc() has poor browser support(does not work in IE 8, Safari 5, Opera 12).</li>
+								<li>The final and best idea is usage of the '<b>box-sizing: border-box;</b>' property. 
+									It will account for 'padding' and 'border' of inner content. 
+									'box-sizing' has good browser support (IE8+, Opera 7+).</li>
+								<li>Conclusion: do not use the 'width: 100%;' property withouth '<b>box-sizing: border-box;</b>'.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </li>
+    </ul>
+</div>
